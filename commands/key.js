@@ -13,7 +13,7 @@ const key = {
             {
                 type: 'input',
                 name: 'key',
-                message: 'Enter APi Key '.green + 'https://www.coinapi.io',
+                message: 'Enter APi Key '.green + 'https://api.nomics.com',
                 validate: isRequired
             }
         ]);
