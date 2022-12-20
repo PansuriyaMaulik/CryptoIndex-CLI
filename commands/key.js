@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const Colors = require('colors');
 const KeyManager = require('../lib/KeyManager.js');
+const { isRequired } = require('../utils/validation.js');
 
 const key = {
     async set() {
@@ -12,7 +13,8 @@ const key = {
             {
                 type: 'input',
                 name: 'key',
-                message: 'Enter APi Key '.green + 'https://www.coinapi.io'
+                message: 'Enter APi Key '.green + 'https://www.coinapi.io',
+                validate: isRequired
             }
         ]);
 
@@ -24,7 +26,7 @@ const key = {
         }
     },
     show() {
-        console.log("Hello from show");
+        
     },
     remove() {
         console.log("Hello from remove");
